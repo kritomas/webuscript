@@ -1,0 +1,38 @@
+html {
+	padding: 0px;
+	margin: 0px;
+}
+body {
+	padding: 0px;
+	margin: 0px;
+	display: flex;
+    flex-direction: column;
+	height: 100vh;
+}
+
+main {
+	flex-grow: 1;
+}
+
+header {
+	padding: 20px;
+	background-color: lightblue;
+	display: flex;
+	align-items: center;
+}
+
+footer {
+	padding: 20px;
+	background-color: lightblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+	margin: 5px;
+}
+
+p {
+	margin: 10px;
+}
