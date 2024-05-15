@@ -1,6 +1,7 @@
 <?php
 
-//require './DBC.php';
+require './DBC.php';
+include './header.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
@@ -16,7 +17,7 @@ echo '
 	</head>
 	<body>';
 
-	include './header.php';
+	headerHome();
 
 	echo'
 		<main>
