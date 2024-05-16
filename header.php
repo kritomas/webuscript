@@ -6,6 +6,7 @@ function headerHome()
 {
 	echo '
 	<header>
+		<img src="logo.png" style="height: 3em;">
 		<div>';
 
 	if (!empty($_SESSION["username"]))

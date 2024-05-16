@@ -16,14 +16,14 @@ main {
 
 header {
 	padding: 20px;
-	background-color: lightblue;
+	background-color: #f464b9;
 	display: flex;
 	align-items: center;
 }
 
 footer {
 	padding: 20px;
-	background-color: lightblue;
+	background-color: #f464b9;
 	display: flex;
 	justify-content: center;
 	align-items: center;
