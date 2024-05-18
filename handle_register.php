@@ -2,8 +2,6 @@
 	require './DBC.php';
 	require 'user.php';
 
-	error_reporting(E_ALL);
-	ini_set('display_errors', 'on');
 	session_start();
 
 	if (empty($_POST["username"]) || empty($_POST["password"]))
@@ -13,6 +11,7 @@
 	}
 
 	$user = new User();
+	$user->name = $_POST["username"];
 	$user->password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 	$query = DBC::getConnection()->prepare("insert into User (username, password) values (?, ?);");

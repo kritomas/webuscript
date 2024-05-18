@@ -1,9 +1,9 @@
 <?php
+//error_reporting(E_ALL);
+//ini_set('display_errors', 'on');
 
 require './DBC.php';
 include './header.php';
-//error_reporting(E_ALL);
-//ini_set('display_errors', 'on');
 
 session_start();
 
@@ -17,7 +17,7 @@ echo '
 	</head>
 	<body>';
 
-	headerHome();
+	printHeader("home");
 
 	echo'
 		<main>
