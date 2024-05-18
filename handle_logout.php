@@ -2,8 +2,7 @@
 
 session_start();
 
-$_SESSION["username"] = null;
-$_SESSION["password"] = null;
+$_SESSION["user"] = null;
 
 header("Location: index.php");
 

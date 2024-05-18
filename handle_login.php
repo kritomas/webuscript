@@ -1,5 +1,6 @@
 <?php
 	require './DBC.php';
+	require './user.php';
 
 	session_start();
 
@@ -9,11 +10,12 @@
 		exit();
 	}
 
-	$username = $_POST["username"];
+	$user = new User();
+	$user->name = $_POST["username"];
 
 	$query = DBC::getConnection()->prepare("select username, password from User where username = ?");
-	$query->bind_param("s", $username);
-	$username = $_POST["username"];
+	$query->bind_param("s", $user->name);
+	$user->name = $_POST["username"];
 	$query->execute();
 
 	$query = $query->get_result();
@@ -24,13 +26,13 @@
 		die("Unknown user");
 	}
 	$row = $query->fetch_assoc();
-	$username = $row["username"];
+	$user->name = $row["username"];
+	$user->password = $row["password"];
 	if (!password_verify($_POST["password"], $row["password"]))
 	{
 		die("wrong password");
 	}
-	$_SESSION["username"] = $username;
-	$_SESSION["password"] = $password;
+	$_SESSION["user"] = $user;
 
 	header("Location: index.php");
 ?>
