@@ -24,6 +24,18 @@ function printHeader($page)
 	{
 		echo '</b>';
 	}
+	if (!empty($_SESSION["user"]))
+	{
+		if ($page === "profile")
+		{
+			echo '<b>';
+		}
+		echo'<a href="profile">Profile</a>';
+		if ($page === "profile")
+		{
+			echo '</b>';
+		}
+	}
 	echo'<a href="register">Register</a>';
 	echo'<a href="login">Log In</a>';
 	if (!empty($_SESSION["user"]))
