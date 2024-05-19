@@ -4,10 +4,11 @@ RewriteBase /
 # Do nothing
 RewriteRule ^index\.php$ - [L]
 
-RewriteRule ^profile$ /profile.php [L]
 RewriteRule ^home$ /index.php [L]
+RewriteRule ^profile$ /profile.php [L]
 RewriteRule ^register$ /register.php [L]
 RewriteRule ^login$ /login.php [L]
+RewriteRule ^changelang$ /change_lang.php [L]
 
 # Redirect if no exist
 RewriteCond %{REQUEST_FILENAME} !-f

@@ -6,7 +6,7 @@
 
 	if (empty($_POST["username"]) || empty($_POST["password"]))
 	{
-		header("Location: index.php");
+		header("Location: home");
 		exit();
 	}
 
@@ -22,5 +22,5 @@
 
 	$_SESSION["user"] = $user;
 
-	header("Location: index.php");
+	header("Location: home");
 ?>

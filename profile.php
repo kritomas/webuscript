@@ -7,7 +7,7 @@ session_start();
 
 if (empty($_SESSION["user"]))
 {
-	header("Location: index.php");
+	header("Location: home");
 	exit();
 }
 
@@ -29,6 +29,11 @@ echo'
 echo $_SESSION["user"]->name;
 echo '
 			</b></p>
+			<p>Language: <b>';
+echo $_SESSION["user"]->language;
+echo '
+			</b></p>
+			<a href="changelang">Change Language</a>
 		</main>';
 
 include './footer.php';
