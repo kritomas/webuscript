@@ -22,7 +22,7 @@ echo '
 	<body>';
 
 printHeader("profile");
-
+var_dump($_SESSION["attempts"]);
 echo'
 		<main>
 			<p>Username: <b>';
