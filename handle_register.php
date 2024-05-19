@@ -18,9 +18,17 @@
 	$query->bind_param("ss", $user->name, $user->password);
 	$user->name = $_POST["username"];
 	$user->password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-	$query->execute();
+	try
+	{
+		$query->execute();
+	}
+	catch (Exception $e)
+	{
+		die("Username already taken.<br><a href=\"home\">Back</a>");
+	}
 
 	$_SESSION["user"] = $user;
+	$_SESSION["attempts"] = 0;
 
 	header("Location: home");
 ?>
