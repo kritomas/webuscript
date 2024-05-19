@@ -35,6 +35,15 @@ function printHeader($page)
 		{
 			echo '</b>';
 		}
+		if ($page === "list")
+		{
+			echo '<b>';
+		}
+		echo'<a href="list">List</a>';
+		if ($page === "list")
+		{
+			echo '</b>';
+		}
 	}
 	echo'<a href="register">Register</a>';
 	echo'<a href="login">Log In</a>';
