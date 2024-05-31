@@ -1,6 +1,6 @@
 # Webuscript
 
-This silly webserver allows you to register users, set your language, and see other's languages.
+This silly webserver allows you to register users, set your language, and see others' languages.
 
 # Usage
 
@@ -21,10 +21,10 @@ In `htdocs`, create a file named `sql_credentials.json` in the following format:
 	"ip": "[IP of MySQL database server]",
 	"user": "[User of database server]"
 	"password": "[Password for user]",
-	"database": "[The database in which you ran init.sql]"
+	"database": "[Name of database in which you ran init.sql]"
 }
 ```
 
 ## Start
 
-Lastly, use XAMPP to start Apache and MySQL.
+Lastly, use XAMPP to start Apache. Ensure that the MySQL server is running.
